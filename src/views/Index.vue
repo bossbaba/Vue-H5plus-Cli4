@@ -1,18 +1,10 @@
 <template>
   <div class="index">
-    <van-index-bar :index-list="indexList" :sticky-offset-top="46">
-      <div v-for="(item,index ) of indexList" :key='index'>
-        <van-index-anchor :index="index">标题{{index}}</van-index-anchor>
-        <van-cell title="文本" />
-        <van-cell title="文本" />
-        <van-cell title="文本" />
-      </div>
-    </van-index-bar>
+    <div>wellcome vvh5+</div>
   </div>
 </template>
 
 <script>
-import { IndexBar, IndexAnchor } from 'vant';
 export default {
   data () {
     return {
@@ -32,5 +24,8 @@ export default {
 
 <style lang="stylus" scoped>
 .index 
-  position relative
+  display flex
+  justify-content center
+  align-items center
+  height calc(100vh - 92px)
 </style>

@@ -18,7 +18,6 @@ import Vue from "vue";
 import Tabbar from "@/components/Tabbar";
 import { mapState, mapMutations } from "vuex";
 import {Toast} from 'vant'
-import { NavBar } from 'vant';
 export default {
   name: "home",
   data() {
@@ -34,7 +33,7 @@ export default {
           path: () => import("@/views/Classify.vue"),
           icon: "apps-o",
           name: "classify",
-          text: "分类"
+          text: "组件"
         },
         {
           path: () => import("@/views/Cart.vue"),

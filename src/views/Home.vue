@@ -70,6 +70,7 @@ export default {
   methods: {
     ...mapMutations(["clickChangesCurrentPages","clickChangesCurrentPagesTitle"]),
     TabPages(item) {
+      window.console.log(item);
       this.currentTabComponent = item.name;
       this.clickChangesCurrentPages(item.name);
       this.clickChangesCurrentPagesTitle(item.text);

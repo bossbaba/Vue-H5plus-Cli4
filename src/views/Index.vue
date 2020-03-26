@@ -1,31 +1,43 @@
 <template>
-  <div class="index">
-    <div>wellcome vvh5+</div>
+  <div class="index" ref="index">
+    <div>
+      <div>wellcome vvh5+</div>
+      <div>wellcome vvh5+</div>
+      <div>wellcome vvh5+</div>
+      <div>wellcome vvh5+</div>
+    </div>
   </div>
 </template>
 
 <script>
+import BScroll from "better-scroll";
 export default {
-  data () {
+  data() {
     return {
-      indexList:[1,2,3,4,5,6,7,8,9]
-    }
+    };
   },
   mounted() {
-    window.plus ? this.plusReady() : document.addEventListener("plusready", this.plusReady, !1)
+    window.plus
+      ? this.plusReady()
+      : document.addEventListener("plusready", this.plusReady, !1);
+    this.$nextTick(() => {
+      this.scroll = new BScroll(this.$refs.index, {});
+    });
   },
   methods: {
-    plusReady() {
-      
-    }
+    plusReady() {}
   }
 };
 </script>
 
 <style lang="stylus" scoped>
-.index 
-  display flex
-  justify-content center
-  align-items center
-  height calc(100vh - 92px)
+.index {
+  height: 100vh;
+
+  div {
+    div {
+      height: 100vh;
+    }
+  }
+}
 </style>
